@@ -4,7 +4,8 @@ services :
     build:
       context : .
       dockerfile : Dockerfile
-    restart : always 
+    restart : always
     ports:
-      - 1080:1080
-    
+      - 80:1080
+    volumes:
+      - ${PWD}/config.json:/etc/shadowsocksr.json
