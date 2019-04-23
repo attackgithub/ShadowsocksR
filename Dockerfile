@@ -8,4 +8,4 @@ RUN apt update && apt install zlib1g-dev build-essential autoconf libtool libssl
     gawk debhelper dh-systemd init-system-helpers pkg-config asciidoc xmlto libpcre++-dev -y
 RUN ./autogen.sh && ./configure && make && make install
 
-ENTRYPOINT [ "ss-server" , "-c /etc/shadowsocks.json" ]
+ENTRYPOINT [ "ss-server" , "-c /etc/shadowsocksr.json" ]
