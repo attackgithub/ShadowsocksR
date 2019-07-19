@@ -9,3 +9,7 @@ services :
       - 443:1080
     volumes:
       - ${PWD}/config.json:/etc/shadowsocksr.json
+    ulimits:
+      nofile:
+        soft: "-1"
+        hard: "-1"
