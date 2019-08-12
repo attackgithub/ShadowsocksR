@@ -340,6 +340,7 @@ report_addr(int fd, int err_level)
     peer_name = get_peer_name(fd);
     if (peer_name != NULL) {
         LOGE("failed to handshake with %s", peer_name);
+        return; //disabled auto ban :) 
         update_block_list(peer_name, err_level);
     }
 }
